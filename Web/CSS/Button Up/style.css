@@ -1,0 +1,35 @@
+.search{
+    color: #37aaac;
+    background-color: white;
+    border: 2px solid #37aaac;
+    border-radius: 50px;
+    padding: 5px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 50px 40px 10px 50px;
+}
+.plus{
+    background-color: #37aaac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 2px solid #37aaac;
+    border-radius: 50%;  
+    font-size: 24px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 0px 20px 10px 50px;
+}
+.create{
+    color: white;
+    background-color: #2b78e4;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0px 20px 10px 50px;
+    box-shadow: 4px 4px 0px 0px black;
+
+}
