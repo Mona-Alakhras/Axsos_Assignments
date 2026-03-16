@@ -1,21 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     background-color: silver;
     margin: 20px;
 }
 .container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap; /*لسماح للعناصر بالالتفاف*/
     width: 950px;
     background-color: silver;
     margin: 0px auto;
-    width: 100%;
+    gap: 15px;
 }
 
 .top-nav {
+    width: 100%;
     height: 150px;
     background-color: green;
-    padding: 10px 10px;
-    border: 2px solid silver;
+    margin-bottom: 10px;
 }
 
 .side-nav {
@@ -27,24 +31,25 @@ body{
 }
 
 .main {
-    height: 400px;
-    width: 700px;
+    height: 450px;
+    width: 735px;
     background-color: red;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    gap: 20px;
 }
 
 .sub-content {
-    height: 200px;
-    width: 210px;
+    height: 180px;
+    width: 215px;
     background-color: yellow;
-    display: flex;
-    border: 2px solid red;
 }
 
 #advertisement {
     height: 120px;
-    width: 660px;
+    width: 100%;
     background-color: purple;
 }
