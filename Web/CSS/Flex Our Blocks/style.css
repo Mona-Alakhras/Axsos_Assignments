@@ -1,50 +1,55 @@
+* {
+    box-sizing: border-box;
+}
 
 body{
     background-color: silver;
     margin: 20px;
 }
 .container {
+    display: flex;
+    flex-wrap: wrap; /*لسماح للعناصر بالالتفاف*/
     width: 950px;
     background-color: silver;
     margin: 0px auto;
+    gap: 15px;
 }
 
 .top-nav {
     width: 100%;
     height: 150px;
     background-color: green;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .side-nav {
     height: 300px;
     width: 200px;
     background-color: blue;
-    display: inline-block;
-    margin-right: 25px;
+    padding: 40px 20px;
+    border: 2px solid silver;
 }
 
 .main {
-    height: 400px;
-    width: 700px;
+    height: 450px;
+    width: 735px;
     background-color: red;
-    display: inline-block;
-    vertical-align: top;
-    padding: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    gap: 20px;
 }
 
 .sub-content {
-    height: 200px;
-    width: 210px;
+    height: 180px;
+    width: 215px;
     background-color: yellow;
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 10px;
 }
 
 #advertisement {
     height: 120px;
-    width: 660px;
+    width: 100%;
     background-color: purple;
-    margin-top: 10px;
 }
