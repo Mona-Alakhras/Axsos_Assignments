@@ -10,3 +10,7 @@ function hide(element){
     element.remove();
     
 }
+
+function showNotification(element){
+    alert('Ninja was liked');
+}
