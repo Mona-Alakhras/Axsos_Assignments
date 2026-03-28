@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 900px;
+    width: 80%;
     margin: 0 auto;
     height: 100%;
 }
@@ -52,7 +52,7 @@
 
 .main-container{
     display: flex;
-    width: 900px;
+    width: 80%;
     margin: 30px auto;
     gap: 20px;
 }
@@ -209,4 +209,17 @@
 
 .footer a {
     color: #00a1b7;
+}
+@media (max-width: 700px) {
+  .nav {
+    font-size: 10px;
+  }
+  .nav-content {
+    gap: 30px;
+    width: fit-content;
+    margin:0 20px ;
+  }
+  .main-container {
+    flex-direction: column;
+  }
 }
