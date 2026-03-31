@@ -3,7 +3,7 @@ function edit(element){
     h2.innerText = element.value = "Todd E";
 }
 
-var img = document.querySelectorAll(".user-connection");
-function removeUser(element){
-    img.remove(element);
+function removeUser(id){
+  var element =document.querySelector(".user-connection");
+  element.remove(id);
 }

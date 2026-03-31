@@ -64,28 +64,25 @@
                     <span class="circle-nav">2</span> Connection Requests
                 </div>
                 <div class="side-info">
-                    <div class="user-connection">
+                    <div id="user1" class="user-connection">
                         <div class="user">
                             <img src="./img/todd-s.jpg" alt="todd-pic" class="pic">
                             <span>Todd E</span>
                         </div>
                         <div class="actions">
-                            <img src="./icons/accept-circle.png" alt="accept-icon" class="accept"
-                                onclick="removeUser(this)">
-                            <img src="./icons/close-circle.png" alt="close-icon" class="close"
-                                onclick="removeUser(this)">
+                            <img src="./icons/accept-circle.png" alt="accept-icon" class="accept" onclick="removeUser('user1')">
+                            <img src="./icons/close-circle.png" alt="close-icon" class="close" onclick="removeUser('user1')">
                         </div>
                     </div>
-                    <div class="user-connection">
-                        <div id="user1" class="user">
+                    <div id="user2" class="user-connection">
+                        <div class="user">
                             <img src="./img/phil-s.jpg" alt="pill-pic" class="pic">
                             <span>Pill K</span>
                         </div>
                         <div class="actions">
                             <img src="./icons/accept-circle.png" alt="accept-icon" class="accept"
-                                onclick="removeUser(user1)">
-                            <img src="./icons/close-circle.png" alt="close-icon" class="close"
-                                onclick="removeUser()">
+                                onclick="removeUser('user2')">
+                            <img src="./icons/close-circle.png" alt="close-icon" class="close" onclick="removeUser('user2')">
                         </div>
                     </div>
                 </div>
