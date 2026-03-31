@@ -4,6 +4,10 @@ function edit(element){
 }
 
 function removeUser(id){
-  var element =document.querySelector(".user-connection");
-  element.remove(id);
+  var element =document.querySelectorAll(".user-connection");
+  for(var i = 0; i < element.length; i++){
+    if(element[i].id == id){
+      element[i].remove();
+    }
+  }
 }
