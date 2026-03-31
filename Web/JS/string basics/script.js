@@ -13,7 +13,7 @@ console.log(removeBlanks("Pl ayTha tF nkyM usi c"));
 function getDigits(str){
     var newDigit = "";
     for(var i =0; i<= str.length-1; i++){
-        if(str[i]>='0' && str[i]<=9){
+        if(str[i]>='0' && str[i]<='9'){
             newDigit+= str[i];
         }
     }
@@ -53,3 +53,22 @@ function removeShorterStrings(arr, minLength){
     return newArray;
 }
 console.log(removeShorterStrings(['There','is','a','bug','in','the','system'],3))
+
+function longestCommonPrefix(strs){
+    var firstWord = strs[0];
+    for(var i = 1; i < strs.length; i++){
+        while(strs[i].indexOf(firstWord) !== 0){
+            firstWord = firstWord.substring(0 , firstWord.length-1);
+            if (firstWord === ""){
+                return "";
+            } 
+        }
+    }
+    return firstWord;
+}
+
+console.log(longestCommonPrefix(["flower","flow","flight"]));
+
+
+
+
