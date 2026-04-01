@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    box-sizing: border-box;
+
+}
+
+.nav {
+    height: 70px;
+    width: 100%;
+    background-color: #9fc5f8;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.title {
+    color: white;
+    margin: 0;
+    font-weight: bold;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.first-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 25px;
+
+}
+
+.line {
+    height: 2px;
+    background-color: black;
+    margin-bottom: 15px;
+}
+
+select {
+    border: 3px solid black;
+}
+
+.select {
+    display: flex;
+    gap: 10px;
+}
+
+.select p {
+    font-weight: 500;
+}
+
+.second-main {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.day-weather {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    flex: 1;
+    padding: 20px 10px;
+    background-color: #eeeeee;
+    min-height: 350px;
+}
+
+.day-weather h3 {
+    font-size: 24px;
+}
+
+.pic {
+    width: 150px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.day-weather p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.num-temp {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.h3-sec {
+    color: #2b78e4;
+}
+
+.h3-first {
+    color: #d03431;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    border: 3px solid black;
+    background-color: #eeeeee;
+    padding: 5px 15px;
+}
+.footer h3{
+    margin-bottom: 20px;
+}
+.footer-text{
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    background-color: #9fc5f8;
+    color: black;
+    padding: 5px 10px;
+    border: 3px solid black;
+    box-shadow: 3px 3px black;
+    cursor: pointer;
+    
+}
+
+@media (max-width: 700px) {
+    .second-main {
+        flex-direction: column;
+    }
+}
