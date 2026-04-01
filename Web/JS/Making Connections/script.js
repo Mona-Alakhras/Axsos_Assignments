@@ -1,6 +1,6 @@
  var h2 = document.querySelector("#name");
-function edit(element){
-    h2.innerText = element.value = "Todd E";
+function edit(){
+  h2.innerText = "Todd E";
 }
 
 function removeUser(id){
@@ -10,4 +10,6 @@ function removeUser(id){
       element[i].remove();
     }
   }
+  document.querySelector(".circle-nav").innerHTML--;
 }
+
