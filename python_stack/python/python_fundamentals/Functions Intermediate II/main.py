@@ -19,6 +19,11 @@ print(students)
 #3
 sports_directory['soccer'][0] = 'Andres'
 print(sports_directory)
+
+ronney = sports_directory['soccer'][2]
+print(ronney)
+
+
 #4
 z[0]['y']=30
 print(z)
