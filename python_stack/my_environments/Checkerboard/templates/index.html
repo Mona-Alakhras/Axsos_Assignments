@@ -16,9 +16,9 @@
         <div class="row">
             {% for c in range(0, col): %}
             {% if (r + c) % 2 == 0: %}
-            <div class="square color1"></div>
+            <div class="square color1" style="background-color: {{ color1 }};" ></div>
             {% else: %}
-            <div class="square color2"></div>
+            <div class="square color2" style="background-color: {{ color2 }};" ></div>
             {% endif %}
             {% endfor %}
         </div>
