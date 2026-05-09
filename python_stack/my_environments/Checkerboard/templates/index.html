@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Checkerboard {{row}} x {{col}}</h1>
+
+    <div class="container">
+        {% for r in range(0, row): %}
+        <div class="row">
+            {% for c in range(0, col): %}
+            {% if (r + c) % 2 == 0: %}
+            <div class="square color1"></div>
+            {% else: %}
+            <div class="square color2"></div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+
+</body>
+
+</html>
