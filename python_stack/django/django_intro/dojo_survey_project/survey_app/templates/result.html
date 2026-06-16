@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submitted Info</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="result-box">
+        <h3>Submitted Info</h3>
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Dojo Location:</strong> {{ location }}</p>
+        <p><strong>Favorite Language:</strong> {{ language }}</p>
+        <p><strong>Experience Level:</strong> {{ experience }}</p>
+        
+        <p><strong>Interests:</strong> 
+            {% for interest in interests %}
+                {{ interest }}{% if not forloop.last %}, {% endif %}
+            {% empty %}
+                None
+            {% endfor %}
+        </p>
+        
+        <p><strong>Comment:</strong> {{ comment }}</p>
+        
+        <a href="/" class="go-back-btn">Go Back</a>
+        <div style="clear: both;"></div>
+    </div>
+
+</body>
+</html>
