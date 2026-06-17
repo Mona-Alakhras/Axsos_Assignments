@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Number Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .box {
+            display: inline-block;
+            width: 250px;
+            height: 200px;
+            line-height: 200px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px auto;
+            vertical-align: middle;
+        }
+        .bg-red { background-color: red; }
+        .bg-green { background-color: green; }
+        .bg-black { background-color: black; line-height: normal; padding-top: 60px; height: 140px; }
+        input[type="number"], button {
+            padding: 5px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking of a number between 1 and 100</p>
+    <p>Attempts: <strong>{{ request.session.attempts }} / 5</strong></p>
+    {% if request.session.status == 'low' %}
+        <div class="box bg-red">Too low!</div>
+    {% elif request.session.status == 'high' %}
+        <div class="box bg-red">Too high!</div>
+    {% elif request.session.status == 'lose' %}
+        <div class="box bg-black">
+            You Lose!<br>
+            The number was {{ request.session.target_number }}<br>
+            <form action="/reset">
+                <button type="submit">Play Again!</button>
+            </form>
+        </div>
+    {% elif request.session.status == 'correct' %}
+        <div class="box bg-green" style="line-height: normal; padding-top: 60px; height: 140px;">
+            {{ request.session.target_number }} was the number!<br>
+            <form action="/reset">
+                <button type="submit">Play Again!</button>
+            </form>
+        </div>
+    {% endif %}
+
+    {% if request.session.status != 'correct' and request.session.status != 'lose' %}
+        <p>Take a guess!</p>
+        <form action="/guess" method="post">
+            {% csrf_token %}
+            <input type="number" name="user_guess" min="1" max="100" required>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    {% endif %}
+    
+</body>
+</html>
