@@ -1,0 +1,60 @@
+/* static/css/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container { 
+    display: flex; 
+    gap: 50px; 
+    margin-bottom: 30px; 
+}
+
+.form-box { 
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    width: 300px; 
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.form-group { 
+    margin-bottom: 15px; 
+}
+
+.form-group label { 
+    display: inline-block; 
+    width: 90px; 
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    width: 180px;
+    padding: 4px;
+}
+
+.dojo-list { 
+    margin-top: 20px; 
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+}
+
+.delete-btn { 
+    background-color: #ff4444; 
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    cursor: pointer; 
+    margin-left: 15px; 
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
