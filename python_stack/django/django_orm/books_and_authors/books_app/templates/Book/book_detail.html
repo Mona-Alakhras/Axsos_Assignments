@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book.title }} - Details</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="detail-box">
+        <h1>{{ book.title }}</h1>
+        <p><strong>ID:</strong> {{ book.id }}</p>
+        <p><strong>Description:</strong> {{ book.desc }}</p>
+        
+        <h3>Authors:</h3>
+        <ul>
+            {% for author in book.authors.all %}
+                <li>{{ author.first_name }} {{ author.last_name }}</li>
+            {% empty %}
+                <li>No authors associated with this book yet.</li>
+            {% endfor %}
+        </ul>
+
+        <form action="/books/{{ book.id }}/add_author" method="POST" style="margin-top: 25px;">
+            {% csrf_token %}
+            <div class="form-group" style="display: inline-block;">
+                <select name="author_id" required>
+                    <option value="" disabled selected>Select an Author</option>
+                    {% for author in available_authors %}
+                        <option value="{{ author.id }}">{{ author.first_name }} {{ author.last_name }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn-add" style="margin-left: 10px;">Add</button>
+            </div>
+        </form>
+        <br><br>
+        <p><a href="/"><- Back to Books Page</a></p>
+    </div>
+</body>
+</html>
