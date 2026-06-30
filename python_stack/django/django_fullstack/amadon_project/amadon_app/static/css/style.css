@@ -1,0 +1,66 @@
+body {
+    background-color: #fdfdfd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 40px;
+    color: #333;
+}
+
+.store-title {
+    font-weight: bold;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.amadon-table {
+    border: 2px solid #333333 !important;
+    box-shadow: 4px 4px 0px #333333;
+}
+
+.amadon-table th {
+    background-color: #e0e0e0;
+    color: #000;
+    border: 2px solid #333333 !important;
+    font-weight: bold;
+}
+
+.amadon-table td {
+    border: 2px solid #333333 !important;
+    background-color: #ffffff;
+}
+
+.btn-buy {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #333333;
+    font-weight: bold;
+    padding: 2px 15px;
+    box-shadow: 2px 2px 0px #333333;
+}
+
+.btn-buy:hover {
+    background-color: #eee;
+}
+
+.checkout-box {
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    border-radius: 4px;
+    padding: 30px;
+    box-shadow: 5px 5px 0px #333333;
+    max-width: 550px;
+}
+
+.thanks-msg {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.total-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px dashed #666;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
