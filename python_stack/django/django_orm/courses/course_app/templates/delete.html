@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete a course</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/courses.css' %}">
+</head>
+<body class="container">
+
+    <div class="delete-card">
+        <h3 class="mb-4 fw-bold">Are you sure you want to delete the following course?</h3>
+        
+        <div class="mb-2 row">
+            <span class="col-sm-3 fw-bold">Name:</span>
+            <span class="col-sm-9">{{ course.name }}</span>
+        </div>
+        <div class="mb-4 row">
+            <span class="col-sm-3 fw-bold">Description:</span>
+            <span class="col-sm-9">{{ course.description.content|default:"No description" }}</span>
+        </div>
+
+        <div class="d-flex gap-3">
+            <a href="/" class="btn btn-secondary border-dark border-2 fw-bold px-4" style="box-shadow: 2px 2px 0px #333;">No</a>
+            <a href="{% url 'delete_course' course.id %}" class="btn btn-delete-confirm">Yes! I want to delete this</a>
+        </div>
+    </div>
+
+</body>
+</html>

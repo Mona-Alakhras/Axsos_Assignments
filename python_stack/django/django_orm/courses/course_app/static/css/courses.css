@@ -1,0 +1,84 @@
+body {
+    background-color: #fafafa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 40px;
+    color: #222;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    border-radius: 4px;
+    padding: 25px;
+    box-shadow: 4px 4px 0px #333333; /* تأثير الظل المصمت كالمخطط */
+}
+
+.btn-add {
+    background-color: #00a86b;
+    color: white;
+    border: 2px solid #333333;
+    font-weight: bold;
+    padding: 6px 20px;
+    box-shadow: 2px 2px 0px #333333;
+}
+
+.btn-add:hover {
+    background-color: #008f5a;
+    color: white;
+}
+
+.delete-card {
+    background-color: #ffffff;
+    border: 3px solid #333333;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 6px 6px 0px #333333;
+    max-width: 600px;
+    margin: 40px auto;
+    
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all; 
+}
+
+.btn-delete-confirm {
+    background-color: #b7094c;
+    color: white;
+    border: 2px solid #333333;
+    font-weight: bold;
+    padding: 8px 25px;
+    box-shadow: 3px 3px 0px #333333;
+}
+
+.courses-table-container {
+    margin-top: 40px;
+}
+
+.table-sketch {
+    border: 2px solid #333333 !important;
+}
+
+.table-sketch th {
+    background-color: #cccccc;
+    color: #000000;
+    border: 2px solid #333333 !important;
+    font-weight: bold;
+}
+
+.table-sketch td {
+    border: 2px solid #333333 !important;
+    background-color: #ffffff;
+}
+
+.comments-section {
+    margin-top: 15px;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
